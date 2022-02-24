@@ -1,4 +1,45 @@
 body{
     background-color: orange;
     font-family: Arial, Helvetica, sans-serif;
+    padding: 20px 10vw;
+    font-size: 30px;
 }
+
+li{
+    margin: 10px 0px;
+}
+
+a{
+    color: white;
+    background-color: black;
+    padding: 2px 5px;
+}
+
+.header{
+    font-size: 70px;
+    font-weight: bold;
+    margin: 50px 0px;
+    padding: 5px 10px;
+    color: white;
+    background-color: black;
+    display: inline-block;
+}
+
+#content{
+    margin-left: 40px;
+}
+
+.header.subheader{
+    font-size: 50px;
+    margin: 20px 0px;
+}
+
+.header.subheader::before{
+    content: "\2022";
+    padding: 10px;
+}
+
+.subitem{
+    margin-left: 50px;
+}
+
