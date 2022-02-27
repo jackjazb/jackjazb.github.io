@@ -17,7 +17,11 @@ a{
     color: white;
     background-color: black;
     padding: 2px 5px;
-    transition: 0.1s;
+    transition: 0.3s;
+}
+
+a:hover{
+    background-color: darkslategrey;
 }
 
 i{
@@ -50,6 +54,7 @@ i{
 
 .subitem{
     margin-left: 50px;
+    margin-bottom: 30px;
 }
 
 #cv{
