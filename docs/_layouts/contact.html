@@ -1,0 +1,10 @@
+---
+layout: default
+---
+{%- if site.email -%}
+<p>Ping me an email at
+	<a class="u-email" href="mailto:{{ site.email }}">
+		{{ site.email }}
+	</a>
+</p>
+{%- endif -%}

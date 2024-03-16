@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "html"
+date:   2023-03-15 17:10:41 +0000
+author: Jekyll
+---
+
+<script>
+	let i = 0;
+	function f(){
+		i += 1;
+		document.querySelector('#counter').innerHTML = i;
+	}
+</script>
+
+<button onClick="f()">test</button>
+<div id="counter">0</div>

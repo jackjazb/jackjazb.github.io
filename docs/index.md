@@ -1,6 +1,6 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: home
+layout: default
 ---
+👋 Hi, I'm Jack, a UK based software engineer and very occasional [blogger](/blog). 
+
+I'm currently writing Rust and Typescript.

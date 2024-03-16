@@ -1,31 +1,17 @@
-<footer class="site-footer h-card">
-  <data class="u-url" href="{{ " /" | relative_url }}"></data>
+<footer>
+  <span>&copy; {{ site.author | escape }} {{ site.time | date: '%Y' }}</span>
+  <span>
+    {%- if site.github_username -%}
+    <a href="https://github.com/{{ site.github_username | cgi_escape | escape }}">
+      GitHub
+    </a>
+    {%- endif -%}
 
-  <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">
-            {%- if site.author -%}
-            {{ site.author | escape }}
-            {%- else -%}
-            {{ site.title | escape }}
-            {%- endif -%}
-          </li>
-          {%- if site.email -%}
-          <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></l>
-            {%- endif -%}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        {%- include social.html -%}
-      </div>
-    </div>
-
-  </div>
-
+    {%- if site.spotify_id -%}
+    <a href="https://open.spotify.com/artist/{{ site.spotify_id | cgi_escape | escape }}">
+      Spotify
+    </a>
+    {%- endif -%}
+    <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+  </span>
 </footer>

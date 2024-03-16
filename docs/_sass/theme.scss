@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&family=Sorts+Mill+Goudy:ital@0;1&display=swap');
+@import "include/syntax-highlighting";
+
+@mixin up-from($device) {
+  @media screen and (min-width: $device) {
+    @content;
+  }
+}
+
+@mixin down-from($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin h-list() {
+  display: flex;
+  gap: 0.5em;
+}
+
+@mixin meta-pair() {
+  display: flex;
+  flex-direction: column;
+
+  @include up-from($phone) {
+    flex-direction: row;
+    gap: 0.5em;
+  }
+}
+
+$background: #0f0f1a;
+$foreground: #f2e9e4;
+$faded: #4a4e69;
+$hover: #0084ff;
+
+$phone: 600px;
+$laptop: 800px;
+
+body {
+  font-family: "Anuphan", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: x-large;
+  background-color: $background;
+  color: $foreground;
+
+  @include up-from($laptop) {
+    margin: 2em;
+  }
+
+  margin: 1em;
+}
+
+main {
+  @include up-from($laptop) {
+    max-width: 28em;
+  }
+}
+
+header {
+  margin: 1em 0em;
+}
+
+a {
+  color: $foreground;
+}
+
+a:hover {
+  color: $hover;
+  transition-duration: .2s;
+  transition-timing-function: ease;
+}
+
+footer {
+  @include h-list();
+  margin-top: 1em;
+
+  span {
+    @include h-list();
+  }
+
+  * {
+    color: $faded;
+  }
+
+  @include down-from($phone) {
+    flex-direction: column-reverse;
+  }
+}
+
+header {
+  margin-bottom: 4em;
+  h1 {
+    font-size: 32px;
+    margin: 0.5em 0em;
+    font-weight: bold;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .breadcrumb {
+    color: $faded;
+  }
+
+  nav {
+    @include h-list();
+
+    a {
+      font-weight: bold;
+    }
+  }
+}
+
+.post-title {
+  font-weight: normal;
+  @include meta-pair();
+
+  margin: 0.5em 0em;
+
+  span {
+    color: $faded;
+  }
+}
+
+.post {
+  .post-info {
+    @include meta-pair();
+  }
+
+  .post-author {
+    color: $faded;
+  }
+}
