@@ -1,0 +1,31 @@
+<ul class="social-media-list">
+  {%- if site.github_username -%}
+  <li>
+    <a href="https://github.com/{{ site.github_username | cgi_escape | escape }}">
+      <svg class="svg-icon">
+        <use xlink:href="{{ '/assets/social-icons.svg#github' | relative_url }}">
+
+        </use>
+      </svg>
+      <span class="username">
+        GitHub
+      </span>
+    </a>
+  </li>
+  {%- endif -%}
+
+  {%- if site.spotify_id -%}
+  <li>
+    <a href="hhttps://open.spotify.com/artist/3Xmb9GKlBKmp97WNc9lOVh{{ site.spotify_id | cgi_escape | escape }}">
+      <svg class="svg-icon">
+        <use xlink:href="{{ '/assets/social-icons.svg#spotify' | relative_url }}">
+
+        </use>
+      </svg>
+      <span class="username">
+        Spotify
+      </span>
+    </a>
+  </li>
+  {%- endif -%}
+</ul>
