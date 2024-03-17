@@ -15,8 +15,8 @@ First and Second Year BSc Computer Science
 
 **Dauntsey’s School, 09/2012 - 07/2020**
 
-- **A-Levels**: Computer Science (A*), Maths(A*), Further Maths(A), English Literature (A*)
-- **GCSEs**: 11 9/A* grades, including Maths, English and Computer Science. 1 A in Further Maths
+- **A-Levels**: Computer Science (A\*), Maths(A\*), Further Maths (A), English Literature (A\*)
+- **GCSEs**: 11 9/A\* grades, including Maths, English and Computer Science. 1 A in Further Maths
 
 ## Experience
 

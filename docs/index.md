@@ -1,6 +1,6 @@
 ---
 layout: default
 ---
-👋 Hi, I'm Jack, a UK based software engineer and very occasional [blogger](/blog). 
+👋 Hi, I'm Jack, a UK based software engineer, musician and very occasional [blogger](/blog).
 
-I'm currently writing Rust and Typescript.
+I'm currently writing Rust, Typescript and React.
