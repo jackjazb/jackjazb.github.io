@@ -1,7 +1,9 @@
-@use "sass:map";
-
-@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&family=Sorts+Mill+Goudy:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&display=swap');
 @import "include/syntax-highlighting";
+
+// Media queries.
+$phone: 600px;
+$laptop: 800px;
 
 @mixin up-from($device) {
   @media screen and (min-width: $device) {
@@ -15,15 +17,23 @@
   }
 }
 
-@mixin h-list() {
+// Evenly space horizontal elements.
+@mixin horizontal() {
   display: flex;
   gap: 0.5em;
 }
 
-// Styling for 
+// Styling for post/author elements (or similar)
 @mixin meta-pair() {
   display: flex;
   flex-direction: column;
+  margin: 0.5em 0em;
+
+  font-weight: normal;
+
+  span:nth-child(2) {
+    color: $neutral;
+  }
 
   @include up-from($phone) {
     flex-direction: row;
@@ -31,62 +41,58 @@
   }
 }
 
+// Applies styling to a set of elements based on a theme map.
 @mixin theme($theme) {
   background-color: map-get($theme, "background");
   color: map-get($theme, "foreground");
+
   a {
     color: map-get($theme, "foreground");
+    transition-duration: .2s;
+    transition-timing-function: ease;
   }
+
+  a:hover {
+    color: map-get($theme, "hover");
+  }
+
   svg {
     max-height: 1em;
     fill: map-get($theme, "faded");
   }
 }
 
-$hover: #0084ff;
-$faded: #4a4e69;
+$neutral: #4a4e69;
 
 $light: (
   "background": #efefef,
   "foreground": #0f0f1a,
-  "faded": #4a4e69,
-  "hover": #0084ff
+  "hover": #3384ff
 );
 
 $dark: (
   "background": #0f0f1a,
   "foreground": #f2e9e4,
-  "faded": #4a4e69,
   "hover": #0084ff
 );
 
-:root {
-  --background: #0f0f1a;
-  --foreground: #f2e9e4;
-  --faded: #4a4e69;
-  --hover: #0084ff;
-
-}
-$phone: 600px;
-$laptop: 800px;
 
 body {
   font-family: "Anuphan", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
   font-size: x-large;
+  margin: 0.5em;
 
-  @include theme($dark);
-  
-  @include up-from($laptop) {
-    margin: 2em;
+  @include theme($light);
+
+  @media (prefers-color-scheme: dark) {
+    @include theme($dark);
   }
 
-  margin: 1em;
-}
-
-.light{
-  @include theme($light);
+  @include up-from($phone) {
+    margin: 2em;
+  }
 }
 
 main {
@@ -95,51 +101,36 @@ main {
   }
 }
 
-header {
-  margin: 1em 0em;
-}
-
-a:hover {
-  color: $hover;
-  transition-duration: .2s;
-  transition-timing-function: ease;
-}
 
 footer {
-  @include h-list();
   margin-top: 1em;
 
+  @include horizontal();
+
   span {
-    @include h-list();
+    @include horizontal();
   }
 
-  * {
-    color: $faded;
-  }
-
-  #toggle-theme {
-    display: flex;
-    align-items: center;
-
-    
+  *,
+  a {
+    color: $neutral;
   }
 
   @include down-from($phone) {
     flex-direction: column-reverse;
   }
-
 }
 
 header {
-  margin-bottom: 4em;
+  margin: 1em 0em 4em 0em;
+  font-weight: bold;
 
   h1 {
     font-size: 32px;
     margin: 0.5em 0em;
-    font-weight: bold;
 
     .breadcrumb {
-      color: $faded;
+      color: $neutral;
     }
   }
 
@@ -148,48 +139,11 @@ header {
   }
 
   nav {
-    @include h-list();
-
-    a {
-      font-weight: bold;
-    }
+    @include horizontal();
   }
 }
 
-.post-title {
-  font-weight: normal;
+.post-title,
+.post-info {
   @include meta-pair();
-
-  margin: 0.5em 0em;
-
-  span {
-    color: $faded;
-  }
-}
-
-.post {
-  .post-info {
-    @include meta-pair();
-  }
-
-  .post-author {
-    color: $faded;
-  }
-}
-
-
-@media (prefers-color-scheme: light) {
-  :root {
-    filter: invest(100%);
-  }
-
-  body {
-    background-color: map-get($light, "background");
-    color: map-get($light, "foreground");
-  }
-
-  a {
-    color: map-get($light, "foreground");
-
-  }
 }

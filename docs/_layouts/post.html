@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<article itemscope itemtype="http://schema.org/BlogPosting">
   <h1>{{ page.title | escape }}</h1>
   <p class="post-info">
     <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
@@ -10,7 +10,7 @@ layout: default
     </time>
     {%- if page.author -%}
     <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <span class="post-author" itemprop="name">{{ page.author }}
+      <span itemprop="name">{{ page.author }}
       </span>
     </span>
     {%- endif -%}

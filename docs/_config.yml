@@ -3,7 +3,7 @@ author: Jack Jazrawy-Brown
 email: jackjazb@gmail.com
 description: >-
   Hi, I'm Jack, a UK based software engineer, musician and very occasional blogger. 
-  I'm currently writing Rust, Typescript and React.
+  I'm currently writing Rust, TypeScript and React.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://jackjazb.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: jackjazb

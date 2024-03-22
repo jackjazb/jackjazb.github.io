@@ -2,22 +2,13 @@
   <span>&copy; {{ site.author | escape }} {{ site.time | date: '%Y' }}</span>
   <span>
     {%- if site.github_username -%}
-    <a href="https://github.com/{{ site.github_username | cgi_escape | escape }}">
-      GitHub
-    </a>
+    <a href="https://github.com/{{ site.github_username | cgi_escape | escape }}">GitHub</a>
     {%- endif -%}
 
     {%- if site.spotify_id -%}
-    <a href="https://open.spotify.com/artist/{{ site.spotify_id | cgi_escape | escape }}">
-      Spotify
-    </a>
+    <a href="https://open.spotify.com/artist/{{ site.spotify_id | cgi_escape | escape }}">Spotify</a>
     {%- endif -%}
     <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
-    <a id="toggle-theme" onclick="toggleTheme()">
-      <svg class="svg-icon">
-        <use xlink:href="{{ '/assets/theme.svg#light' | relative_url }}"></use>
-      </svg>
-    </a>
   </span>
  
 </footer>
