@@ -82,7 +82,7 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   font-size: x-large;
-  margin: 0.5em;
+  margin: 0.75em;
 
   @include theme($light);
 
@@ -98,28 +98,21 @@ body {
 main {
   @include up-from($laptop) {
     max-width: 28em;
+
+    img {
+      max-width: 28em;
+    }
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  img+em {
+    display: block;
   }
 }
 
-
-footer {
-  margin-top: 1em;
-
-  @include horizontal();
-
-  span {
-    @include horizontal();
-  }
-
-  *,
-  a {
-    color: $neutral;
-  }
-
-  @include down-from($phone) {
-    flex-direction: column-reverse;
-  }
-}
 
 header {
   margin: 1em 0em 4em 0em;
@@ -140,6 +133,25 @@ header {
 
   nav {
     @include horizontal();
+  }
+}
+
+footer {
+  margin-top: 1em;
+
+  @include horizontal();
+
+  span {
+    @include horizontal();
+  }
+
+  *,
+  a {
+    color: $neutral;
+  }
+
+  @include down-from($phone) {
+    flex-direction: column-reverse;
   }
 }
 
