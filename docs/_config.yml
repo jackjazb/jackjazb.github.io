@@ -2,10 +2,10 @@ title: Jack Jazrawy-Brown
 author: Jack Jazrawy-Brown
 email: jackjazb@gmail.com
 description: >-
-  Hi, I'm Jack, a UK based software engineer, musician and very occasional blogger. 
+  Hi, I'm Jack, a UK based software engineer and musician.
   I'm currently writing Rust, TypeScript and React.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://jackjazb.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: ""
+url: "https://jackjazb.github.io"
 github_username: jackjazb
 spotify_id: 3Xmb9GKlBKmp97WNc9lOVh
 
