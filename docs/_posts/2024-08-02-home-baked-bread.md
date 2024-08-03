@@ -33,6 +33,7 @@ A basic loaf leavened with commercial yeast will generally contain, at minimum, 
 
 - Dough will not stick to wet skin. When mixing or folding, getting your hand wet makes handling sticky dough far easier. You can also get dough off a spoon or spatula very easily by sliding wet fingers along it.
 - It's helpful to think of a dough as having two sides, a top and a bottom. The top forms the eventual exterior of the loaf, and the bottom the interior. By keeping the same top and bottom throughout baking, the exterior remains strong and taut, and is not folded back into the loaf.
+
 The following steps outline the rough process that goes into any loaf; there will absolutely be variations and specialisations, but to bake a basic country loaf like the one in the photo, this is a good starting point.
 
 ### Preferment
