@@ -15,7 +15,8 @@ Usage
 Options
 
 ``` text
+init            installs dependencies on first run
 start           runs a local server on port 4000
-update          updates the `github-pages` gem.
-post <title>    creates a post in _posts with the current date and the passed title.
+update          updates the `github-pages` gem
+post <title>    creates a post in _posts with the current date and the passed title
 ```
