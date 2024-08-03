@@ -9,6 +9,9 @@ url: "https://jackjazb.github.io"
 github_username: jackjazb
 spotify_id: 3Xmb9GKlBKmp97WNc9lOVh
 
+# Google Analytics
+google_analytics: G-EL4QFC9HVK
+
 # Build settings
 plugins:
   - jekyll-feed
