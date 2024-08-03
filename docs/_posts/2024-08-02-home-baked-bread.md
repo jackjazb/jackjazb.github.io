@@ -1,3 +1,10 @@
+---
+layout: post
+title: "Home Baked Bread"
+date: 2024-08-02 12:00:00 +0000
+author: Jack Jazrawy-Brown
+---
+
 Making your own bread is an excellent thing to do, and quite quick and easy once you've got the hang of it. This is an attempt to write down everything I've learned or figured out after a couple of years of bread making in the hope that it will help out an aspiring baker!
 
 ![bread](/assets/img/posts/bread.webp)

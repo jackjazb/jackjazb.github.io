@@ -5,7 +5,7 @@ layout: default
 {%- for post in site.posts -%}
 <div class="post-title">
 	{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-	<a href="{{ post.url | relative_url }}">
+	<a href="{{ post.id | relative_url }}">
 		{{ post.title | escape }}
 	</a>
 	<span>{{ post.date | date: date_format }}</span>
