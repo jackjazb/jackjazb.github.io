@@ -43,6 +43,7 @@ Most recipes being with a preferment. This is essentially a mixture of flour, wa
 - Biga: Lower hydration, often 50-60%. Usually used in Italian baking.
 - Pâte Fermentée: Around 60% hydration - basically a piece of a previous dough.
 - Sponge: 60-70% hydration. Often used in sandwich loaves or sweet breads
+
 Skipping the preferment stage probably won't destroy your final loaf, but carrying out this step adds a fermented, yeasty taste to the final bread which greatly enhances the complexity of flavour. This is also a good time to check your yeast is alive, and to gauge the environmental conditions where you are baking (these can affect later timings). The exact fermentation time depends on the recipe, but this step is very forgiving - just make it when you have time! I leave my preferments in an airtight container, usually a small bowl inside a large resealable bag - this stops it drying out. You can also use a glass container with a lid that seals. Clingfilm is an option, but it quickly becomes quite wasteful if baking frequently so I try to avoid it! Try to make sure the sides of the vessel are clean before fermentation, as small pieces of preferment can dry and flake off into your dough.
 
 ### Mixing
@@ -59,6 +60,7 @@ For higher hydration dough, I tend to use the "stretch and fold" technique. Ther
 
 - With a wet hand, grab one side of the dough, stretch it upwards, then fold it back down, sticking it onto the other side of the dough.
 - Perform three more folds on each side of the dough
+
 Some recipes may benefit from both kneading and stretching and folding, so some experimentation is worthwhile; kneading is obviously less convenient than the alternative, which can be done entirely within the confines of the mixing bowl. To check if a dough is developed, the best option is the windowpane test. To perform it, tear off a small chunk of dough with wet hands and stretch it into a flat plane. If the dough stretches thin enough for light to pass through, it is likely developed enough.
 
 ### Bulk Fermentation
@@ -122,20 +124,20 @@ This is my current yeast bread recipe - the baker's percentages for the entire r
 
 ### Preferment
 
-Strong white flour, 150g
-Water, 150g
-Yeast, small pinch
+- Strong white flour, 150g
+- Water, 150g
+- Yeast, small pinch
 
 1. Combine in a glass bowl, scrape sides and place in a resealable plastic bag for 16-24 hours.
 
 ### Dough
 
-Entire preferment
-Strong white flour, 380g
-Wholegrain spelt or rye flour, 50g
-Water, 260g
-Salt, 12g
-Yeast, 5g
+- Entire preferment
+- Strong white flour, 380g
+- Wholegrain spelt or rye flour, 50g
+- Water, 260g
+- Salt, 12g
+- Yeast, 5g
 
 1. Combine all dough ingredients in a large bowl and mix until well combined.
 2. Wait for 15 minutes, then perform one set of stretch and folds.
