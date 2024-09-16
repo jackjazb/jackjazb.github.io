@@ -6,169 +6,171 @@ $phone: 600px;
 $laptop: 800px;
 
 @mixin up-from($device) {
-  @media screen and (min-width: $device) {
-    @content;
-  }
+    @media screen and (min-width: $device) {
+        @content;
+    }
 }
 
 @mixin down-from($device) {
-  @media screen and (max-width: $device) {
-    @content;
-  }
+    @media screen and (max-width: $device) {
+        @content;
+    }
 }
 
 // Evenly space horizontal elements.
 @mixin horizontal() {
-  display: flex;
-  gap: 0.5em;
+    display: flex;
+    gap: 0.5em;
 }
 
 // Styling for post/author elements (or similar)
 @mixin meta-pair() {
-  display: flex;
-  flex-direction: column;
-  margin: 0.5em 0em;
+    display: flex;
+    flex-direction: column;
+    margin: 0.5em 0em;
 
-  font-weight: normal;
+    font-weight: normal;
 
-  span:nth-child(2) {
-    color: $neutral;
-  }
+    span:nth-child(2) {
+        color: $neutral;
+    }
 
-  @include up-from($phone) {
-    flex-direction: row;
-    gap: 0.5em;
-  }
+    @include up-from($phone) {
+        flex-direction: row;
+        gap: 0.5em;
+    }
 }
 
 // Applies styling to a set of elements based on a theme map.
 @mixin theme($theme) {
-  background-color: map-get($theme, "background");
-  color: map-get($theme, "foreground");
-
-  a {
+    background-color: map-get($theme, "background");
     color: map-get($theme, "foreground");
-    transition-duration: .2s;
-    transition-timing-function: ease;
-  }
 
-  a:hover {
-    color: map-get($theme, "hover");
-  }
+    a {
+        color: map-get($theme, "foreground");
+        transition-duration: .2s;
+        transition-timing-function: ease;
+    }
 
-  svg {
-    max-height: 1em;
-    fill: map-get($theme, "faded");
-  }
+    a:hover {
+        color: map-get($theme, "hover");
+    }
+
+    svg {
+        max-height: 1em;
+        fill: map-get($theme, "faded");
+    }
 }
 
 $neutral: #4a4e69;
 
 // These maps define the colours for light, dark and any other themes desired.
 $light: (
-  "background": #efefef,
-  "foreground": #0f0f1a,
-  "hover": #3384ff
+    "background": #efefef,
+    "foreground": #0f0f1a,
+    "hover": #3384ff
 );
 
 $dark: (
-  "background": #0f0f1a,
-  "foreground": #f2e9e4,
-  "hover": #0084ff
+    "background": #0f0f1a,
+    "foreground": #f2e9e4,
+    "hover": #0084ff
 );
 
 
 body {
-  font-family: "Anuphan", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  font-size: x-large;
-  margin: 0.75em;
+    font-family: "Anuphan", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin: 0.75em;
+    font-size: large;
 
-  // By default, use light theme - however, if the user's device is set to dark, override it.
-  @include theme($light);
+    // By default, use light theme - however, if the user's device is set to dark, override it.
+    @include theme($light);
 
-  @media (prefers-color-scheme: dark) {
-    @include theme($dark);
-  }
+    @media (prefers-color-scheme: dark) {
+        @include theme($dark);
+    }
 
-  @include up-from($phone) {
-    margin: 2em;
-  }
+    @include up-from($phone) {
+        margin: 2em;
+        font-size: x-large;
+
+    }
 }
 
 main {
-  @include up-from($laptop) {
-    max-width: 28em;
+    @include up-from($laptop) {
+        max-width: 28em;
+
+        img {
+            max-width: 28em;
+        }
+    }
 
     img {
-      max-width: 28em;
+        max-width: 100%;
     }
-  }
 
-  img {
-    max-width: 100%;
-  }
-
-  img+em {
-    display: block;
-  }
+    img+em {
+        display: block;
+    }
 }
 
 
 header {
-  margin: 1em 0em 4em 0em;
-  font-weight: bold;
+    margin: 1em 0em 4em 0em;
+    font-weight: bold;
 
-  h1 {
-    font-size: 32px;
-    margin: 0.5em 0em;
+    h1 {
+        font-size: 32px;
+        margin: 0.5em 0em;
 
-    .breadcrumb {
-      color: $neutral;
+        .breadcrumb {
+            color: $neutral;
+        }
     }
-  }
 
-  a {
-    text-decoration: none;
-  }
+    a {
+        text-decoration: none;
+    }
 
-  nav {
-    @include horizontal();
-  }
+    nav {
+        @include horizontal();
+    }
 }
 
 footer {
-  margin-top: 1em;
+    margin-top: 1em;
 
-  @include horizontal();
-
-  span {
     @include horizontal();
-  }
 
-  *,
-  a {
-    color: $neutral;
-  }
+    span {
+        @include horizontal();
+    }
 
-  @include down-from($phone) {
-    flex-direction: column-reverse;
-  }
+    *,
+    a {
+        color: $neutral;
+    }
+
+    @include down-from($phone) {
+        flex-direction: column-reverse;
+    }
 }
 
 table {
-  th {
-    padding-right: 0.5em;
+    th {
+        padding-right: 0.5em;
 
-  }
+    }
 
-  td {
-    padding: 0.1em 0em;
-  }
+    td {
+        padding: 0.1em 0em;
+    }
 }
 
 .post-title,
 .post-info {
-  @include meta-pair();
+    @include meta-pair();
 }
