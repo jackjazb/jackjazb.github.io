@@ -1,0 +1,67 @@
+---
+header: Jack Jazrawy-Brown
+github: "https://github.com/jackjazb"
+spotify: "https://open.spotify.com/artist/3Xmb9GKlBKmp97WNc9lOVh"
+---
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="/css/prism.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/img/icons/favicon.ico">
+    <title>
+      {% if title %}
+        {{ title }}
+      {% else %}
+        {{ header }}
+      {% endif %}
+    </title>
+  </head>
+
+  <body class="m-4 md:m-12 text-xl md:text-2xl">
+    <!-- header -->
+    <header class="mb-16">
+      <h1 class="text-3xl my-4">
+        <a href="/" class="no-underline">
+          {{ header }}
+        </a>
+        {% if title %}
+          <span class="text-deemph">
+            /
+          </span>
+
+          <span class="text-deemph text-nowrap">{{ title }}</span>
+        {% endif %}
+      </h1>
+
+      <!-- navigation -->
+      <div class="flex gap-3 font-bold text-2xl">
+        {%- for route in collections.route -%}
+          <a class="no-underline" href="{{route.url}}">{{ route.data.title }}</a>
+        {%- endfor -%}
+      </div>
+    </header>
+
+    <!-- main content -->
+    <main class="max-w-2xl">
+      {{ content }}
+    </main>
+
+    <!-- footer -->
+    <footer class="flex-col flex-col-reverse md:flex-row mt-8 flex gap-3 text-deemph">
+      <span>&copy; Jack Jazrawy-Brown {% year %}</span>
+      <span class="flex gap-3">
+        <a href="{{github}}">GitHub</a>
+        <a href="{{spotify}}">Spotify</a>
+        <a href="/feed.xml">RSS</a>
+      </span>
+    </footer>
+  </body>
+</html>

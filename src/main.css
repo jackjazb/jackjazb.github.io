@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --font-anuphan: "Anuphan", sans-serif;
+    --color-bg: var(--color-slate-900);
+    --color-fg: var(--color-slate-100);
+    --color-emph: var(--color-blue-400);
+    --color-deemph: var(--color-slate-600)
+}
+
+@layer base {
+
+    html,
+    div {
+        @apply bg-slate-100 text-slate-900 dark:bg-slate-950 dark:text-slate-100 font-anuphan;
+    }
+
+    h1 {
+        @apply font-bold text-3xl;
+    }
+
+    h2 {
+        @apply font-bold text-3xl;
+    }
+
+    p,
+    pre,
+    code {
+        @apply my-6
+    }
+
+    pre, code {
+        @apply overflow-x-scroll
+    }
+
+    code {
+        @apply bg-slate-850 p-1 rounded-xs
+    }
+
+    a {
+        @apply hover:text-blue-400 ease-in-out duration-200 underline
+    }
+
+    ul {
+        @apply pl-8 list-disc
+    }
+
+
+}
+
+@layer components {}

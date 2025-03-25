@@ -1,0 +1,28 @@
+---
+layout: base.liquid
+tags: blog
+permalink: "blog/{{ title | slugify }}/"
+author: Jack Jazrawy-Brown
+---
+
+<article itemscope="" itemtype="http://schema.org/BlogPosting">
+  <h1 class="text-3xl font-bold my-7">
+    {{ title }}
+  </h1>
+  <div class="flex gap-2">
+    <time datetime="{{date}}" itemprop="datePublished">
+      {{ date | date: "%b %d, %Y" }}
+    </time>
+
+    <span
+      itemprop="author"
+      itemscope=""
+      itemtype="http://schema.org/Person"
+      class="text-deemph">
+      {{ author }}
+    </span>
+  </div>
+  <div itemprop="articleBody" class="text-xl leading-relaxed">
+    {{ content }}
+  </div>
+</article>

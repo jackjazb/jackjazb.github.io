@@ -1,12 +1,11 @@
 ---
-layout: post
+layout: post.liquid
 title: "Home-Baked Bread"
-date: 2024-08-02 12:00:00 +0000
-author: Jack Jazrawy-Brown
+date: 2024-08-02
 ---
 Making your own bread is an excellent thing to do, and quite quick and easy once you've got the hang of it. This is an attempt to write down everything I've learned or figured out after a couple of years of bread-making in the hope that it will help out an aspiring baker!
 
-![bread](/assets/img/posts/bread.webp)
+![bread](/img/posts/home-baked-bread/bread.webp)
 *A recent loaf*
 
 There are numerous reasons to make your own bread. The best I can think of (other than just enjoying the process) is that you will generally pay quite a premium at a baker or supermarket to get a loaf of a similar quality to one baked at home. The cheaper you go at the shops, the worse the quality of the bread, and why do that when you could bake an artisan loaf at home? Compared with ultra-processed supermarket bread, a good home-baked loaf is far more delicious and nourishing, and definitely not as time-consuming or difficult to produce as it may seem.
