@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Self Hosted Music"
+title: "Self Hosting Music"
 date: 2025-03-24 12:00:00 +0000
 author: Jack Jazrawy-Brown
 ---
-Music streaming services are, in a lot of ways, excellent. I'm a Spotify user, and the ability to listen to just about any piece of music recorded in the last hundred years, wherever and whenever you want, is pretty amazing. I've found some of my favorite artists via playlists and recommendations, and there are without doubt musicians who I never would have stumbled across in my own listening.
+Music streaming services are excellent in a lot of ways. I'm a Spotify user, and the ability to listen to just about any piece of music recorded in the last hundred years, wherever and whenever I want, is pretty amazing. I've found some of my favourite artists via playlists and recommendations, and there are without doubt musicians who I never would have stumbled across without the guidance of an algorithm.
 
-There is, however, plenty of aspects of streaming that are... less great. From the artist's perspective, streamers pay out a paltry - and shrinking - sum per stream, something that has made surviving as an indie artist increasingly impossible in the modern music landscape. The injection of piles of VC funding into the music industry has allowed music's value to diminish year on year - we as listeners consume more than ever, for lower cost than ever, in a way that feels (to me at least) deeply unsustainable. Further, content can be, and often is, removed unilaterally, and all aspects of the user's experience can be altered without notice. Spotify's app went from being fantastic to a pile of garbage which keeps trying to sell me fitness courses. Audio quality is low. Users, as is common with so many modern SaaS offerings, have no freedom and no control.
+There are, however, plenty of aspects of streaming that are... less great. From the artist's perspective, streamers pay out a paltry - and shrinking - sum per stream, something that has made surviving as an indie artist increasingly impossible in the modern music landscape. The injection of piles of VC funding into the music industry has allowed music's value to diminish year on year - we as listeners consume more than ever, for lower cost than ever, in a way that feels deeply unsustainable. Further, content can be, and often is, removed unilaterally, and all aspects of the user's experience can be altered without notice - for example, Spotify's app going from great UX to trying to sell me fitness courses. Users, as is common with so many modern SaaS offerings, have no freedom and no control.
 
 So what can we do about it? Well, it's 2025:
 
@@ -16,13 +16,11 @@ So what can we do about it? Well, it's 2025:
 - Polished, free and open source music server software exists
 - All of the app developers who Spotify didn't bother to hire are making much better streaming frontends on their own, and you are free to use them to your heart's content
 
-With a bit of tinkering, you can self-host a streaming experience that matches and even surpasses a typical streamers, can be infinitely customized, and will not try to make you listen to true crime podcasts. To work!
+With a bit of tinkering, you can self-host a streaming experience that matches and even surpasses a typical SaaS, can be infinitely customized, and will not try to make you listen to true crime podcasts. To work!
 
 ## Digital Audio
 
-First step: get some music. For setting up a streaming box, high quality digital audio files are best -WAV is generally maximum quality, FLAC is equal in quality but compressed. 44.1kHz/16-bit is considered CD quality - these files are fairly large, but storage is affordable these days, and in my view retaining maximum quality is the best way to future proof your collection.
-
-It's always worth remembering that the more compressed streaming services can make content without the average user noticing, the lower their bandwidth and storage costs will be. On the contrary, a CD or one-off download has no reason not to offer the highest quality possible, and the difference can be marked. I'm not an overly fussy listener, but there's a *flatness* to Spotify that starts to tire out my ears after a couple of hours of listening, something which I really don't miss with my self hosted collection.
+First step: get some music. For setting up a streaming box, high quality digital audio files are best - WAV or FLAC (losslessly compressed) are the maximum. 44.1kHz/16-bit is considered CD quality - these files are fairly large, but storage is affordable these days, and in my view retaining maximum quality is the best way to future proof your collection.
 
 I would recommend two sources for high quality digital audio: Bandcamp and CDs. The former is the easiest, and in many cases cheapest way to obtain music - most indie bands will post albums there, and the 85% artist cut leaves musicians with a far greater sum per download than streamers. For older stuff that might not be on Bandcamp, CDs are excellent - they are presently at the lowest ebb of their value (think vinyl records circa 2000) and can be found on eBay, wob.com and others for pocket change. Extracting audio from a CD requires ripping - to do this, you can use an old laptop with a CD drive, or an external drive - [this one](https://www.amazon.co.uk/Rioddas-External-Portable-Rewriter-Desktop/dp/B07JGWBLVH) from Amazon costs £20 and works very well. Software wise, I've had great results with [Exact Audio Copy](https://www.exactaudiocopy.de/) - but there are a variety of options.
 
@@ -56,7 +54,7 @@ Server hardware need server software, and my choice is [Jellyfin](https://jellyf
 
 - Install Debian, add your public key for SSH and disable password auth
 - Install [Docker Engine](https://docs.docker.com/engine/install/debian/)
-- Set up a Compose file as shown [here](https://jellyfin.org/docs/general/installation/container/#using-docker-compose) - if you're just streaming music, you can trim the `volumes` section to `config`, `cache` and one `media` volume, as the reset is unnecessary
+- Set up a Compose file as shown [here](https://jellyfin.org/docs/general/installation/container/#using-docker-compose) - if you're just streaming music, you can trim the `volumes` section to `config`, `cache` and one `media` volume, as the rest is unnecessary
 - Spin things up with `docker compose up -d`
 - Use `rysnc` or similar to copy over your ripped music
 - Go to your server's IP and set up an account via the web interface. Password strength is not a huge worry, as we won't be exposing this to the public internet.
@@ -92,4 +90,6 @@ This stuff is just icing on the cake really, but Jellyfin (being open source) ha
 ![feishin](/assets/img/posts/self-hosted-music/feishin.webp)
 *Feishin, looking fantastic*
 
-It's not a great time to be a streaming user. Fees are increasing, advertising is creeping into paid services and quality of service is stagnant or going backwards. I've collected records for years and have always had music files kicking around, but Jellyfin, Picard and Tailscale were the key bits of tech that make this setup viable, and have allowed it to actual displace Spotify for a decent chunk of my listening. I still love the ability to discover new artists and genres that streamers offer, something that's tough to beat with a self hosted library - but for listening to my favourite albums, I'm never going back.
+It's not a great time to be a streaming user. Fees are increasing, advertising is creeping into paid services and quality of service is stagnant or going backwards. The more compressed streaming services can make content without the average user noticing, the lower their bandwidth and storage costs will be. I'm not an overly fussy listener, but there's a flatness to Spotify that starts to tire out my ears after a couple of hours of listening, something which I really don't miss with my self hosted collection.
+
+I've collected records for years and have always had music files kicking around, but Jellyfin, Picard and Tailscale were the key bits of tech that make this setup viable, and have allowed it to actual displace Spotify for a decent chunk of my listening. I still love the ability to discover new artists and genres that streamers offer, something that's tough to beat with a self hosted library - but for listening to my favourite albums, I'm never going back.
