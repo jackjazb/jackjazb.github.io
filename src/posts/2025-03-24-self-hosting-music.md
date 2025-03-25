@@ -3,6 +3,7 @@ layout: post.liquid
 title: "Self Hosting Music"
 date: 2025-03-24
 ---
+
 Music streaming services are excellent in a lot of ways. I'm a Spotify user, and the ability to listen to just about any piece of music recorded in the last hundred years, wherever and whenever I want, is pretty amazing. I've found some of my favourite artists via playlists and recommendations, and there are without doubt musicians who I never would have stumbled across without the guidance of an algorithm.
 
 There are, however, plenty of aspects of streaming that are... less great. From the artist's perspective, streamers pay out a paltry - and shrinking - sum per stream, something that has made surviving as an indie artist increasingly impossible in the modern music landscape. The injection of piles of VC funding into the music industry has allowed music's value to diminish year on year - we as listeners consume more than ever, for lower cost than ever, in a way that feels deeply unsustainable. Further, content can be, and often is, removed unilaterally, and all aspects of the user's experience can be altered without notice - for example, Spotify's app going from great UX to trying to sell me fitness courses. Users, as is common with so many modern SaaS offerings, have no freedom and no control.
@@ -37,7 +38,7 @@ The files will now be named with a standard format and have all relevant metadat
 
 Picard also exposes a scripting language which allows you to customise how it names files. There are a few presets, but I use a custom script which names files to `Disc X - XX - Title.wav` (and arranges them by artists and album if "Move Files" is on):
 
-```picard
+```ts
 $if2(%albumartist%,%artist%)/
 $if(%albumartist%,%album%/,)
 $if($gt(%totaldiscs%,1),Disc %discnumber% - ,)
@@ -62,7 +63,7 @@ This article is aimed at a more tech-experienced user, but it's worth noting the
 
 After a few minutes, album artwork and song details are all present in the web UI. Deeply cool.
 
-![jellyfin](/img/posts/self-hosted-music/jellyfin.webp)
+![jellyfin](/img/posts/self-hosting-music/jellyfin.webp)
 
 ## VPN Magic
 
@@ -86,7 +87,7 @@ This part still feels like magic, and is kind of the killer tech that makes this
 
 This stuff is just icing on the cake really, but Jellyfin (being open source) has an awesome ecosystem of third party clients that can be used to stream your music. On desktop, [Feishin](https://github.com/jeffvli/feishin) is my choice. The Spotify desktop app has been progressively regressing for years, and now looks like a poorly designed mobile app that has been stretched on the rack. It upsets me, and I have not used it once since I set up my server. On Android, I use [Symfonium](https://symfonium.app/), which is quite probably the best app (let alone music player) I have ever used. It's beautiful, fast, lets me download tracks for playback offline and beats Spotify in every conceivable way. There are also fun clients like [jellycli](https://github.com/tryffel/jellycli), which lets you listen to music in your terminal and also offers remote control capabilities.
 
-![feishin](/img/posts/self-hosted-music/feishin.webp)
+![feishin](/img/posts/self-hosting-music/feishin.webp)
 *Feishin, looking fantastic*
 
 It's not a great time to be a streaming user. Fees are increasing, advertising is creeping into paid services and quality of service is stagnant or going backwards. The more compressed streaming services can make content without the average user noticing, the lower their bandwidth and storage costs will be. I'm not an overly fussy listener, but there's a flatness to Spotify that starts to tire out my ears after a couple of hours of listening, something which I really don't miss with my self hosted collection.

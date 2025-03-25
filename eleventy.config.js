@@ -41,7 +41,7 @@ export default function (eleventyConfig) {
     eleventyConfig.on('eleventy.before', async ({ dir }) => {
         // Bit of a hack, but I think this is the best way to get it to do file watching.
         try {
-            execSync(`npx @tailwindcss/cli -i ./src/main.css -o ./${dir.output}/main.css`, { stdio: 'inherit' });
+            execSync(`npx @tailwindcss/cli -i ./main.css -o ./${dir.output}/main.css`, { stdio: 'inherit' });
         } catch (error) {
             console.error(`Error building CSS:`, error);
         }

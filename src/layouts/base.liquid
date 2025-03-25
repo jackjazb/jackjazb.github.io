@@ -33,11 +33,11 @@ spotify: "https://open.spotify.com/artist/3Xmb9GKlBKmp97WNc9lOVh"
           {{ header }}
         </a>
         {% if title %}
-          <span class="text-deemph">
+          <span class="text-faint">
             /
           </span>
 
-          <span class="text-deemph text-nowrap">{{ title }}</span>
+          <span class="text-faint text-nowrap">{{ title }}</span>
         {% endif %}
       </h1>
 
@@ -55,7 +55,7 @@ spotify: "https://open.spotify.com/artist/3Xmb9GKlBKmp97WNc9lOVh"
     </main>
 
     <!-- footer -->
-    <footer class="flex-col flex-col-reverse md:flex-row mt-8 flex gap-3 text-deemph">
+    <footer class="flex-col-reverse md:flex-row mt-8 flex gap-3 text-faint">
       <span>&copy; Jack Jazrawy-Brown {% year %}</span>
       <span class="flex gap-3">
         <a href="{{github}}">GitHub</a>

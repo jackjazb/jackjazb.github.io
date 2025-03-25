@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --font-anuphan: "Anuphan", sans-serif;
+    --font-roboto-mono: "Roboto Mono", monospace;
+    --color-faint: var(--color-slate-600)
+}
+
+@layer base {
+
+    html,
+    div {
+        @apply bg-slate-100 text-slate-900 dark:bg-slate-950 dark:text-slate-100 font-anuphan;
+    }
+
+    /* Header styles */
+    h1 {
+        @apply font-bold text-3xl;
+    }
+
+    h2 {
+        @apply font-bold text-3xl;
+    }
+
+    h3,
+    h4,
+    h5 {
+        @apply font-bold
+    }
+
+    /* Paragraph spacing */
+    p,
+    pre,
+    ul,
+    ol {
+        @apply my-6
+    }
+
+    img {
+        @apply mb-2
+    }
+
+    a {
+        @apply hover:text-blue-400 ease-in-out duration-100 underline
+    }
+
+    /* Restore bullets */
+    ul {
+        @apply pl-8 list-disc
+    }
+
+    ol {
+        @apply list-decimal
+    }
+
+    /* Tables */
+    th, td {
+        @apply px-2
+    }
+
+}
+
+@layer components {}

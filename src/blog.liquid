@@ -6,7 +6,7 @@ title: Blog
   {%- for post in collections.blog reversed -%}
     <div class="flex  flex-col sm:gap-3 sm:flex-row">
       <a href="{{post.url}}">{{ post.data.title }}</a>
-      <span class="text-deemph">
+      <span class="text-faint">
         {{ post.data.date | date: "%b %d, %Y" }}
       </span>
     </div>
